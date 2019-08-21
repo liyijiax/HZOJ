@@ -10,7 +10,6 @@ using namespace std;
 #define max_n 100000
 
 int people[max_n + 5] = {0};
-int times[max_n + 5] = {0};
 
 // 00000111111找第一个１
 int binary_search(int *num, int head, int tail, int x) {
@@ -23,18 +22,16 @@ int binary_search(int *num, int head, int tail, int x) {
 }
 
 int main() {
-    int n, m;
+    int n, m, x;
     cin >> n >> m;
     for (int i = 1; i <= n; i++) {
         cin >> people[i];
     }
     int flag = 0;
     for (int j = 1; j <= m; j++) {
-        cin >> times[j];
-    }
-    for (int j = 1; j <= m; j++) {
+        cin >> x;
         flag && cout << " ";
-        cout << binary_search(people, 1, n, times[j]);
+        cout << binary_search(people, 1, n, x);
         flag = 1;
     }
     return 0;
