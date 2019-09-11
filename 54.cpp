@@ -9,9 +9,10 @@
 #include <cstring>
 using namespace std;
 #define max_n 10000
+typedef long long int1;
 
-int factorial[max_n + 5] = {0};
-int mul[max_n + 5] = {0};
+int1 factorial[max_n + 5] = {0};
+int1 mul[max_n + 5] = {0};
 
 void calc(int x) {
     memset(factorial, 0, sizeof(factorial));
@@ -54,6 +55,10 @@ int main() {
     while (scanf("%d", &x) != EOF) {
         long long mul = 1;
         calc(x);
+        /*for (int i = factorial[0]; i >= 1; i--) {
+            cout << factorial[i];
+        }*/
+        //cout << endl;
         mul_num();
     }
     return 0;
